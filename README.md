@@ -229,7 +229,7 @@ Add screenshots here after uploading them.
 
 ### Comments Page
 
-![Comments](screenshots/comments.png)
+<img width="1919" height="1013" alt="Screenshot 2026-06-09 094933" src="https://github.com/user-attachments/assets/4b128b9c-d892-4c80-b9f2-cc3e58bad65d" />
 
 ### GitHub Actions
 
@@ -241,7 +241,7 @@ Add screenshots here after uploading them.
 
 ### Render Deployment
 
-![Render](screenshots/render.png)
+<img width="1919" height="1018" alt="Screenshot 2026-06-09 094309" src="https://github.com/user-attachments/assets/0e5ac068-b677-46a6-8b3f-4d4c0104a128" />
 
 ---
 
