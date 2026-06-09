@@ -219,9 +219,7 @@ appsec-ci-pipeline/
 
 ---
 
-## Screenshots
-
-Add screenshots here after uploading them.
+## Visual Representations
 
 ### Homepage
 
@@ -231,13 +229,28 @@ Add screenshots here after uploading them.
 
 <img width="1919" height="1013" alt="Screenshot 2026-06-09 094933" src="https://github.com/user-attachments/assets/4b128b9c-d892-4c80-b9f2-cc3e58bad65d" />
 
-### GitHub Actions
+### GitHub Actions Security Pipeline
 
-![Actions](screenshots/actions.png)
+The CI/CD pipeline automatically executes:
+
+- Semgrep (SAST)
+- Trivy Filesystem Scan
+- Trivy Container Image Scan
+- Docker Build Validation
+- OWASP ZAP DAST Scan
+
+The OWASP ZAP scan successfully analyzes the deployed application and automatically creates GitHub Issues containing discovered security findings.
+
+<img width="1913" height="856" alt="Screenshot 2026-06-09 095603" src="https://github.com/user-attachments/assets/9f114985-c3ea-4c01-b678-f04b7b4349c7" />
+
+
+Note: The workflow is marked as failed due to a known artifact-upload issue in the upstream OWASP ZAP GitHub Action (`zaproxy/action-baseline`). Security scanning completes successfully and vulnerability reports are generated in the repository Issues section.
 
 ### OWASP ZAP Findings
 
-![ZAP](screenshots/zap.png)
+<img width="1891" height="850" alt="image" src="https://github.com/user-attachments/assets/752fc873-bf18-4aea-b17a-94fd6ef753d1" />
+<img width="1879" height="857" alt="image" src="https://github.com/user-attachments/assets/cca76041-b33e-4075-bcbc-cfc110ecef37" />
+<img width="1881" height="839" alt="image" src="https://github.com/user-attachments/assets/787554fb-c63d-42b4-9aec-8504338b8e19" />
 
 ### Render Deployment
 
