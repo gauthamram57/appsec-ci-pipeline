@@ -225,7 +225,7 @@ Add screenshots here after uploading them.
 
 ### Homepage
 
-![Homepage](screenshots/homepage.png)
+<img width="1919" height="1019" alt="Screenshot 2026-06-08 212413" src="https://github.com/user-attachments/assets/58c8655d-56b3-413b-80df-9c5db217e8ff" />
 
 ### Comments Page
 
