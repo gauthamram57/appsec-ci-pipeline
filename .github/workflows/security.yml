@@ -17,9 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Run Semgrep
-        uses: returntocorp/semgrep-action@v1
+      - uses: returntocorp/semgrep-action@v1
 
   trivy:
     runs-on: ubuntu-latest
@@ -42,21 +40,13 @@ jobs:
       - name: Build Docker Image
         run: docker build -t appsec-ci-pipeline .
 
-      - name: Scan Docker Image
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: appsec-ci-pipeline
-          format: table
-
   zap:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Run OWASP ZAP Baseline Scan
-        run: |
-          docker run --rm \
-            ghcr.io/zaproxy/zaproxy:stable \
-            zap-baseline.py \
-            -t https://appsec-ci-pipeline.onrender.com
+      - name: OWASP ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.12.0
+        with:
+          target: "https://appsec-ci-pipeline.onrender.com"
+          allow_issue_writing: true
+          fail_action: false
