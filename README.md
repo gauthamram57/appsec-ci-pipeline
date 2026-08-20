@@ -206,6 +206,8 @@ The application is deployed on Render.
 ```text
 appsec-ci-pipeline/
 │
+├── docs/
+│   └── linux-docker-pipeline-setup.md
 ├── app/
 ├── webapp/
 ├── .github/
