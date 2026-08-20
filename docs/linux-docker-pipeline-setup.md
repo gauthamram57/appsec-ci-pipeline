@@ -1,10 +1,10 @@
-# 🐧 Linux & Docker Environment Setup for AppSec CI Pipelines
+# Linux and Docker Environment Setup for AppSec CI Pipelines
 
 Engineering notes for configuring Linux (Ubuntu/Debian) hosts and Docker container engines for automated application security scanning pipelines.
 
 ---
 
-## 🛠️ System Prerequisites
+## System Prerequisites
 
 Most AppSec tooling (Semgrep, Trivy, OWASP ZAP, Nuclei) operates natively on Linux container environments.
 
@@ -12,7 +12,7 @@ Most AppSec tooling (Semgrep, Trivy, OWASP ZAP, Nuclei) operates natively on Lin
 # Update base system packages
 sudo apt update && sudo apt upgrade -y
 
-# Install core CLI tools & dependencies
+# Install core CLI tools and dependencies
 sudo apt install -y curl wget git jq python3-pip apt-transport-https ca-certificates
 
 # Install Docker Engine
@@ -23,10 +23,10 @@ sudo usermod -aG docker $USER
 
 ---
 
-## ⚙️ Security Pipeline Scanning Architecture
+## Security Pipeline Scanning Architecture
 
 ```
-[GitHub Trigger / Push] ──> [Runner Environment (Ubuntu)]
+[GitHub Trigger / Push] -> [Runner Environment (Ubuntu)]
                                   │
           ┌───────────────────────┼───────────────────────┐
           ▼                       ▼                       ▼
